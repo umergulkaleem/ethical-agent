@@ -1,0 +1,35 @@
+name: ethical-compliance-agent
+version: 0.2.0
+description: >
+  Ethical Compliance Agent inspects agent outputs for bias, safety, hallucinations/citations,
+  and policy violations. Uses AI/ML APIs when API key is provided.
+author:
+  name: Your Name
+  email: you@example.com
+tags:
+  - ethics
+  - compliance
+  - safety
+inputs:
+  - name: text
+    type: string
+    description: "The text or agent output to check."
+outputs:
+  - name: compliance_report
+    type: object
+    description: "Structured JSON report with results and metadata."
+endpoints:
+  - type: http
+    url: http://localhost:8000/check # Replace with your deployed endpoint
+    method: POST
+    input: application/json
+    output: application/json
+runtime:
+  type: python
+  command: "python main_agent.py --mode server"
+  env:
+    - API_KEY
+license: MIT
+repository:
+  type: git
+  url: https://github.com/your-org/ethical-compliance-agent

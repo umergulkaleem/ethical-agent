@@ -1,0 +1,14 @@
+agents:
+  - id: ethical-compliance-agent
+    name: Ethical Compliance Agent
+    executable:
+      command: ["python", "main_agent.py"]
+    env:
+      OPENAI_API_KEY: "<set-via-secrets>"
+    options:
+      - name: OPENAI_API_KEY
+        description: "OpenAI API key (set as a secret in Coral runtime)"
+      - name: MODEL
+        description: "Model to use for analysis (default gpt-4)"
+    sample_input:
+      text: "In 2023, city X had 1,000,000 residents. Women are worse drivers than men."
