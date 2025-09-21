@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 # Now imports will work if needed
 from core.input_handler import normalize_input
 
-API_URL = "http://localhost:8000/check"
+API_URL = "https://umergul-ethical-agent.hf.space/check"
 
 st.set_page_config(page_title="Ethical Compliance Agent", layout="wide")
 st.title("🛡️ Ethical Compliance Agent")
